@@ -1,5 +1,6 @@
 {
   "name": "package.json",
+  "homepage": "https://github.com/eudysgarcia.github.io/union-wall-e/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,7 +8,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^7.1.0",
@@ -15,6 +18,7 @@
     "@tailwindcss/vite": "^4.1.14",
     "bootstrap": "^5.3.8",
     "flowbite": "^3.1.2",
+    "gh-pages": "^6.3.0",
     "gsap": "^3.13.0",
     "lucide-react": "^0.544.0",
     "motion": "^12.23.22",

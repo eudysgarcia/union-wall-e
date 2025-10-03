@@ -78,6 +78,7 @@ export function Impact() {
           </Reveal>
 
             
+          <Reveal delay={0.60}>
           <div className="bg-primary-foreground/10 rounded-2xl p-8  bg-blue-500/80">
             <h3 className="text-2xl font-bold mb-4">Testimonio de Padre</h3>
             <p className="leading-relaxed opacity-90 mb-4 ">
@@ -86,6 +87,7 @@ export function Impact() {
             </p>
             <p className="font-semibold">- Carlos, Padre de familia</p>
           </div>
+          </Reveal>
         </div>
       </div>
 
