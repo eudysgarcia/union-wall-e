@@ -2,6 +2,8 @@ import { ArrowRight } from "lucide-react";
 import TextAnimation from "./text/textAnimation.tsx";
 import CountUpOnView from "./animation/countUpOnView.tsx";
 
+const baseUrl = import.meta.env.BASE_URL
+
 export function Hero() {
   return (
     <section
@@ -67,7 +69,7 @@ export function Hero() {
           <div className="relative">
             <div className="rounded-xl overflow-hidden shadow-2xl">
               <img
-                src="/portada.JPG"
+                src={`${baseUrl}/portada.JPG`}
                 alt="Niños felices jugando y aprendiendo juntos"
                 className="max-w-full h-auto object-cover"
               />

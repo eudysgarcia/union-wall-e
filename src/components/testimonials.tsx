@@ -5,6 +5,8 @@ import { Card } from "@/components/ui/card"
 import { ChevronLeft, ChevronRight, Play } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
+const baseUrl = import.meta.env.BASE_URL
+
 export function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0)
 
@@ -14,7 +16,7 @@ export function Testimonials() {
       age: "12 años",
       role: "Beneficiaria",
       quote: "Esta fundación cambió mi vida. Ahora puedo ir a la escuela y tengo amigos que me apoyan.",
-      image: "/ana.jpg",
+      image: `${baseUrl}/ana.jpg`,
       video: "Antes no podía asistir a clases...",
       achievement: "Ahora es la mejor de su clase",
       color: "from-blue-500/20 to-cyan-500/20",
@@ -24,7 +26,7 @@ export function Testimonials() {
       age: "Padre de familia",
       role: "Testimonio familiar",
       quote: "Ver la sonrisa en el rostro de mi hijo en cada momento del dia es invaluable. Gracias por todo su apoyo.",
-      image: "/father.jpg",
+      image: `${baseUrl}/father.jpg`,
       video: "Mi hijo ahora tiene oportunidades...",
       achievement: "Su hijo recibió una beca completa",
       color: "from-emerald-500/20 to-teal-500/20",
@@ -34,7 +36,7 @@ export function Testimonials() {
       age: "Voluntaria",
       role: "Equipo de apoyo",
       quote: "Ser voluntaria aquí me ha enseñado el verdadero significado de la comunidad y el amor.",
-      image: "/help.jpg",
+      image: `${baseUrl}/help.jpg`,
       video: "Cada día aprendo algo nuevo...",
       achievement: "Ha impactado a más de 100 niños",
       color: "from-violet-500/20 to-purple-500/20",

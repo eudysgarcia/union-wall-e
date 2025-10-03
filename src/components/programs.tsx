@@ -1,11 +1,13 @@
 "use client"
 
-import { useState } from "react"
+/* import { useState } from "react" */
 import { BookOpen, Utensils, Stethoscope, Palette, ArrowRight, Check } from "lucide-react"
 import { Card, CardContent } from "../components/ui/card"
 import { Button } from "../components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs"
 import Reveal from "./animation/reveal.tsx"
+
+const baseUrl = import.meta.env.BASE_URL
 
 export function Programs() {
   const programs = [
@@ -14,7 +16,7 @@ export function Programs() {
       title: "Educación y Becas",
       description: "Proporcionamos becas escolares completas, útiles educativos y apoyo académico personalizado.",
       stats: "500+ niños becados",
-      image: "/education.jpg",
+      image: `${baseUrl}/education.jpg`,
       benefits: ["Becas completas", "Útiles escolares", "Tutorías personalizadas", "Acceso a tecnología"],
     },
     {
@@ -22,7 +24,7 @@ export function Programs() {
       title: "Nutrición",
       description: "Programas de alimentación saludable y balanceada que garantizan comidas nutritivas necesarias.",
       stats: "1,200 comidas diarias",
-      image: "/donation.jpg",
+      image: `${baseUrl}/donation.jpg`,
       benefits: ["Desayunos nutritivos", "Almuerzos balanceados", "Meriendas saludables", "Educación nutricional"],
     },
     {
@@ -30,7 +32,7 @@ export function Programs() {
       title: "Salud",
       description: "Acceso gratuito a atención médica de calidad, chequeos regulares y programas preventivos.",
       stats: "800+ consultas mensuales",
-      image: "/operativo.jpg",
+      image: `${baseUrl}/operativo.jpg`,
       benefits: ["Consultas médicas", "Vacunación completa", "Chequeos regulares", "Atención dental"],
     },
     {
@@ -38,12 +40,12 @@ export function Programs() {
       title: "Arte y Recreación",
       description: "Actividades artísticas, deportivas y recreativas que fomentan la creatividad y el talento.",
       stats: "15 talleres activos",
-      image: "/recreative.jpeg",
+      image: `${baseUrl}/recreative.jpeg`,
       benefits: ["Talleres de arte", "Deportes", "Música y danza", "Teatro y expresión"],
     },
   ]
 
-  const [selectedProgram, setSelectedProgram] = useState(0)
+  // Removed unused selectedProgram state
 
   return (
     <section id="programas" className="py-12 md:py-20 bg-background">
@@ -56,7 +58,7 @@ export function Programs() {
         </div>
 
         <div className="max-w-6xl mx-auto">
-          <Tabs defaultValue="0" className="w-full" onValueChange={(value: string) => setSelectedProgram(Number(value))}>
+          <Tabs defaultValue="0" className="w-full">
             <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 mb-8 h-auto gap-2 bg-transparent">
               {programs.map((program, index) => {
                 const Icon = program.icon
